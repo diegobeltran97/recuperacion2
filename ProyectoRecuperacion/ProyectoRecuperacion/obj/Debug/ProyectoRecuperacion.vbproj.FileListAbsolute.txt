@@ -1,0 +1,15 @@
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.exe.config
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.exe
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.pdb
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.xml
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.Form1.resources
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.Resources.resources
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.vbproj.GenerateResource.cache
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.vbproj.CoreCompileInputs.cache
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.exe
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.xml
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.pdb
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.vbprojAssemblyReference.cache
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\Resources\tiburon.jpg
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\Resources\sobreviente.png
+B:\Utp\2019\IISemestre\Recuperacion\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\Resources\shark2 .png
