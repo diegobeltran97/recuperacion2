@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Linq.Expressions
+
+Public Class Form1
 
     'Variables en mayusculas son parte del formulario
     'Variables en minisculo son parte del user Object
@@ -7,8 +9,9 @@
     Dim surv As New Survivor(Me.Width, Me.Height)
     Dim tib As New Tiburon(Me.Width, Me.Height)
 
+    Dim v_surv(4) As Object
+    Dim nivel = 1
 
-    Dim pic_Planta As PictureBox
 
 
     Dim movimiento = 5
@@ -19,7 +22,7 @@
         InitializeComponent()
 
 
-        Controls.Add(surv.imagen_sobrev)
+
         Controls.Add(tib.imagen_tiburon)
 
 
@@ -39,6 +42,8 @@
 
     Private Sub GeneralTime_Tick(sender As Object, e As EventArgs) Handles generalTime.Tick
         txt_tiempo.Text = Val(txt_tiempo.Text) + 1
+
+
     End Sub
 
 
@@ -73,15 +78,21 @@
         End If
 
         lancha_imagen.Location = New Point(lancha_Salvavidas.position_x + lancha_Salvavidas.direccionx, lancha_Salvavidas.position_y + lancha_Salvavidas.direcciony)
-
+        rule_lancha()
     End Sub
 
     Private Sub Btn_iniciar_Click(sender As Object, e As EventArgs) Handles btn_iniciar.Click
         generalTime.Start()
         TimerBarcoCombustible.Start()
         timer_movLancha.Start()
+
+        test()
         mov_survivor.Start()
         mov_Tiburon.Start()
+
+        Controls.Add(surv.imagen_sobrev)
+
+
 
 
 
@@ -105,7 +116,7 @@
 
 
 
-            Return MyBase.ProcessCmdKey(msg, keyData)
+        Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
 
     Private Sub Mov_survivor_Tick(sender As Object, e As EventArgs) Handles mov_survivor.Tick
@@ -118,7 +129,7 @@
 
 
 
-        If surv.imagen_sobrev.Bounds.IntersectsWith(lancha_imagen.Bounds) Then
+        If surv.imagen_sobrev.Bounds.IntersectsWith(tib.imagen_tiburon.Bounds) Then
             Dim rnd As New Random()
             surv.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
         End If
@@ -139,15 +150,51 @@
 
     Function rule_lancha()
 
-
-
-
-        If surv.imagen_sobrev.Bounds.IntersectsWith(lancha_imagen.Bounds) Then
+        If lancha_imagen.Bounds.IntersectsWith(tib.imagen_tiburon.Bounds) Then
             Dim rnd As New Random()
-            surv.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
+            lancha_imagen.Location = New Point(67, 378)
+            rules_game(2)
         End If
 
+        If lancha_imagen.Bounds.IntersectsWith(surv.imagen_sobrev.Bounds) Then
+            Dim rnd As New Random()
+            surv.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
+            rules_game(1)
+        End If
+
+
+
     End Function
+
+    Function test()
+        For Each sobreviviente As Survivor In v_surv
+            sobreviviente = New Survivor(Me.Width, Me.Height)
+            sobreviviente.survivorMovimiento(Me.Width, Me.Height, lancha_imagen)
+            Controls.Add(sobreviviente.imagen_sobrev)
+        Next
+
+    End Function
+    Function rules_game(value As Integer)
+
+
+        Dim Number = value
+
+        Select Case Number
+            Case 1  'Incrementa la vida de los salvavidas' 
+                number_survivor_saved.Text = Val(number_survivor_saved.Text) + 1
+
+            Case 2  'Pierda Vidas el bote'. 
+
+                life_boat_txt.Text = Val(life_boat_txt.Text) - 1
+
+        End Select
+
+
+
+
+    End Function
+
+
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
