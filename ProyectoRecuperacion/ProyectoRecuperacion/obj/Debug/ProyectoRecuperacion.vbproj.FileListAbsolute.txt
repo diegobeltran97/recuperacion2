@@ -28,3 +28,18 @@ C:\Users\diego.sastoque\OneDrive - Universidad Tecnológica de Panamá\2020\Recu
 C:\Users\diego.sastoque\OneDrive - Universidad Tecnológica de Panamá\2020\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.exe
 C:\Users\diego.sastoque\OneDrive - Universidad Tecnológica de Panamá\2020\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.xml
 C:\Users\diego.sastoque\OneDrive - Universidad Tecnológica de Panamá\2020\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.pdb
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\Resources\sobreviente.png
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\Resources\tiburon.jpg
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\Resources\shark2 .png
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.exe.config
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.exe
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.pdb
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\bin\Debug\ProyectoRecuperacion.xml
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.vbprojAssemblyReference.cache
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.Form1.resources
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.Resources.resources
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.vbproj.GenerateResource.cache
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.vbproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.exe
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.xml
+C:\Users\diego\Desktop\Recuperacion\recuperacion2\ProyectoRecuperacion\ProyectoRecuperacion\obj\Debug\ProyectoRecuperacion.pdb

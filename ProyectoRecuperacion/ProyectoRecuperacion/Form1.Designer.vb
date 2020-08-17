@@ -61,19 +61,18 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.txt_tiempo)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btn_iniciar)
-        Me.Panel1.Location = New System.Drawing.Point(-8, -5)
+        Me.Panel1.Location = New System.Drawing.Point(-6, -4)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1080, 101)
+        Me.Panel1.Size = New System.Drawing.Size(810, 82)
         Me.Panel1.TabIndex = 0
         '
         'number_survivor_saved
         '
         Me.number_survivor_saved.AutoSize = True
-        Me.number_survivor_saved.Location = New System.Drawing.Point(596, 47)
-        Me.number_survivor_saved.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.number_survivor_saved.Location = New System.Drawing.Point(447, 38)
         Me.number_survivor_saved.Name = "number_survivor_saved"
-        Me.number_survivor_saved.Size = New System.Drawing.Size(16, 17)
+        Me.number_survivor_saved.Size = New System.Drawing.Size(13, 13)
         Me.number_survivor_saved.TabIndex = 10
         Me.number_survivor_saved.Text = "0"
         Me.number_survivor_saved.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -81,10 +80,9 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(621, 47)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(466, 38)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(12, 17)
+        Me.Label6.Size = New System.Drawing.Size(12, 13)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "/"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -92,31 +90,28 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(647, 47)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(485, 38)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(16, 17)
+        Me.Label5.Size = New System.Drawing.Size(13, 13)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "3"
+        Me.Label5.Text = "9"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(523, 47)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(392, 38)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 17)
+        Me.Label4.Size = New System.Drawing.Size(51, 13)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Salvados"
         '
         'life_boat_txt
         '
         Me.life_boat_txt.AutoSize = True
-        Me.life_boat_txt.Location = New System.Drawing.Point(471, 47)
-        Me.life_boat_txt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.life_boat_txt.Location = New System.Drawing.Point(353, 38)
         Me.life_boat_txt.Name = "life_boat_txt"
-        Me.life_boat_txt.Size = New System.Drawing.Size(16, 17)
+        Me.life_boat_txt.Size = New System.Drawing.Size(13, 13)
         Me.life_boat_txt.TabIndex = 6
         Me.life_boat_txt.Text = "3"
         Me.life_boat_txt.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -124,60 +119,54 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(403, 47)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(302, 38)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 17)
+        Me.Label3.Size = New System.Drawing.Size(33, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Vidas"
         '
         'txt_level
         '
         Me.txt_level.AutoSize = True
-        Me.txt_level.Location = New System.Drawing.Point(355, 47)
-        Me.txt_level.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.txt_level.Location = New System.Drawing.Point(266, 38)
         Me.txt_level.Name = "txt_level"
-        Me.txt_level.Size = New System.Drawing.Size(16, 17)
+        Me.txt_level.Size = New System.Drawing.Size(13, 13)
         Me.txt_level.TabIndex = 4
         Me.txt_level.Text = "1"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(288, 47)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(216, 38)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 17)
+        Me.Label2.Size = New System.Drawing.Size(31, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nivel"
         '
         'txt_tiempo
         '
         Me.txt_tiempo.AutoSize = True
-        Me.txt_tiempo.Location = New System.Drawing.Point(235, 47)
-        Me.txt_tiempo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.txt_tiempo.Location = New System.Drawing.Point(176, 38)
         Me.txt_tiempo.Name = "txt_tiempo"
-        Me.txt_tiempo.Size = New System.Drawing.Size(16, 17)
+        Me.txt_tiempo.Size = New System.Drawing.Size(13, 13)
         Me.txt_tiempo.TabIndex = 2
         Me.txt_tiempo.Text = "0"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(169, 47)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(127, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 17)
+        Me.Label1.Size = New System.Drawing.Size(42, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Tiempo"
         '
         'btn_iniciar
         '
         Me.btn_iniciar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_iniciar.Location = New System.Drawing.Point(36, 34)
-        Me.btn_iniciar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_iniciar.Location = New System.Drawing.Point(27, 28)
         Me.btn_iniciar.Name = "btn_iniciar"
-        Me.btn_iniciar.Size = New System.Drawing.Size(103, 38)
+        Me.btn_iniciar.Size = New System.Drawing.Size(77, 31)
         Me.btn_iniciar.TabIndex = 0
         Me.btn_iniciar.Text = "Iniciar"
         Me.btn_iniciar.UseVisualStyleBackColor = True
@@ -188,10 +177,9 @@ Partial Class Form1
         '
         'Barcobtn
         '
-        Me.Barcobtn.Location = New System.Drawing.Point(16, 511)
-        Me.Barcobtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Barcobtn.Location = New System.Drawing.Point(12, 415)
         Me.Barcobtn.Name = "Barcobtn"
-        Me.Barcobtn.Size = New System.Drawing.Size(100, 28)
+        Me.Barcobtn.Size = New System.Drawing.Size(75, 23)
         Me.Barcobtn.TabIndex = 1
         Me.Barcobtn.Text = "Barco"
         Me.Barcobtn.UseVisualStyleBackColor = True
@@ -204,10 +192,9 @@ Partial Class Form1
         Me.lancha_imagen.BackColor = System.Drawing.SystemColors.ControlDark
         Me.lancha_imagen.BackgroundImage = CType(resources.GetObject("lancha_imagen.BackgroundImage"), System.Drawing.Image)
         Me.lancha_imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.lancha_imagen.Location = New System.Drawing.Point(67, 378)
-        Me.lancha_imagen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lancha_imagen.Location = New System.Drawing.Point(50, 307)
         Me.lancha_imagen.Name = "lancha_imagen"
-        Me.lancha_imagen.Size = New System.Drawing.Size(133, 62)
+        Me.lancha_imagen.Size = New System.Drawing.Size(100, 50)
         Me.lancha_imagen.TabIndex = 4
         Me.lancha_imagen.TabStop = False
         '
@@ -223,14 +210,13 @@ Partial Class Form1
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lancha_imagen)
         Me.Controls.Add(Me.Barcobtn)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Form1"
         Me.Text = "ProyectRecuperacion"
         Me.Panel1.ResumeLayout(False)

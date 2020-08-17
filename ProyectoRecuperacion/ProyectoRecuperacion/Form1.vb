@@ -9,8 +9,10 @@ Public Class Form1
     Dim surv As New Survivor(Me.Width, Me.Height)
     Dim tib As New Tiburon(Me.Width, Me.Height)
 
-    Dim v_surv(4) As Object
+    Dim v_surv(4) As Survivor
     Dim nivel = 1
+
+    Dim lista_surv As New List(Of Survivor)
 
 
 
@@ -86,7 +88,7 @@ Public Class Form1
         TimerBarcoCombustible.Start()
         timer_movLancha.Start()
 
-        test()
+        crearSobrevivientes()
         mov_survivor.Start()
         mov_Tiburon.Start()
 
@@ -121,6 +123,9 @@ Public Class Form1
 
     Private Sub Mov_survivor_Tick(sender As Object, e As EventArgs) Handles mov_survivor.Tick
         surv.survivorMovimiento(Me.Width, Me.Height, lancha_imagen)
+        For Each sobr In lista_surv
+            Controls.Add(sobr.survivorMovimiento(Me.Width, Me.Height, lancha_imagen))
+        Next
         rule_Salvavidas()
     End Sub
 
@@ -133,6 +138,15 @@ Public Class Form1
             Dim rnd As New Random()
             surv.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
         End If
+
+        For Each sobr In lista_surv
+            If sobr.imagen_sobrev.Bounds.IntersectsWith(tib.imagen_tiburon.Bounds) Then
+                Dim rnd As New Random()
+                surv.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
+            End If
+        Next
+
+
 
     End Function
 
@@ -156,22 +170,36 @@ Public Class Form1
             rules_game(2)
         End If
 
-        If lancha_imagen.Bounds.IntersectsWith(surv.imagen_sobrev.Bounds) Then
-            Dim rnd As New Random()
-            surv.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
-            rules_game(1)
-        End If
+
+        For Each sobr In lista_surv
+            If lancha_imagen.Bounds.IntersectsWith(sobr.imagen_sobrev.Bounds) Then
+                Dim rnd As New Random()
+                sobr.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
+                rules_game(1)
+            End If
+
+        Next
+
+
+
 
 
 
     End Function
 
-    Function test()
-        For Each sobreviviente As Survivor In v_surv
+    Function crearSobrevivientes()
+        For Each sobreviviente In v_surv
             sobreviviente = New Survivor(Me.Width, Me.Height)
-            sobreviviente.survivorMovimiento(Me.Width, Me.Height, lancha_imagen)
-            Controls.Add(sobreviviente.imagen_sobrev)
+            lista_surv.Add(sobreviviente)
         Next
+
+        For Each sobr In lista_surv
+            Controls.Add(sobr.imagen_sobrev)
+        Next
+
+
+
+
 
     End Function
     Function rules_game(value As Integer)
@@ -183,9 +211,32 @@ Public Class Form1
             Case 1  'Incrementa la vida de los salvavidas' 
                 number_survivor_saved.Text = Val(number_survivor_saved.Text) + 1
 
-            Case 2  'Pierda Vidas el bote'. 
+                If number_survivor_saved.Text = "9" Then
+                    rules_game(3)
+                End If
 
+            Case 2  'Pierda Vidas el bote'. 
                 life_boat_txt.Text = Val(life_boat_txt.Text) - 1
+
+            Case 3 'Llego a todas las vidas'
+
+                MessageBox.Show("Ganaste" & vbNewLine &
+                       "Universidad Tecnológica de Panamá" & vbNewLine &
+                       "Facultad de Ingeniería en Sistemas Computacionales" & vbNewLine &
+                       "Licenciatura en Desarrollo de Software" & vbNewLine &
+                       "Profesor: Ricardo Chan" & vbNewLine &
+                       "Autor: Diego Sastoque" & vbNewLine &
+                       "Cédula: 20-14-3061")
+            Case 4 'Perdio a todas las vidas'
+
+                MessageBox.Show("Perdiste" & vbNewLine &
+                       "Universidad Tecnológica de Panamá" & vbNewLine &
+                       "Facultad de Ingeniería en Sistemas Computacionales" & vbNewLine &
+                       "Licenciatura en Desarrollo de Software" & vbNewLine &
+                       "Profesor: Ricardo Chan" & vbNewLine &
+                       "Autor: Diego Sastoque" & vbNewLine &
+                       "Cédula: 20-14-3061")
+
 
         End Select
 
@@ -202,5 +253,9 @@ Public Class Form1
 
     Private Sub Mov_Tiburon_Tick(sender As Object, e As EventArgs) Handles mov_Tiburon.Tick
         tib.tiburon_mov(Me.Width, Me.Height, lancha_imagen)
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
     End Sub
 End Class
