@@ -9,7 +9,7 @@ Public Class Form1
     Dim surv As New Survivor(Me.Width, Me.Height)
     Dim tib As New Tiburon(Me.Width, Me.Height)
 
-    Dim v_surv(4) As Survivor
+    Dim v_surv(2) As Survivor
     Dim nivel = 1
 
     Dim lista_surv As New List(Of Survivor)
@@ -71,7 +71,7 @@ Public Class Form1
         End If
 
         If lancha_Salvavidas.position_x <= 0 Then
-            lancha_Salvavidas.position_x = 0
+            lancha_Salvavidas.position_x = 0S
             lancha_Salvavidas.direccionx = -lancha_Salvavidas.direccionx
         End If
         If lancha_Salvavidas.position_x >= Me.Width - lancha_imagen.Width Then
@@ -139,6 +139,7 @@ Public Class Form1
             surv.imagen_sobrev.Location = New Point(rnd.Next(Me.Width), rnd.Next(Me.Height))
         End If
 
+
         For Each sobr In lista_surv
             If sobr.imagen_sobrev.Bounds.IntersectsWith(tib.imagen_tiburon.Bounds) Then
                 Dim rnd As New Random()
@@ -170,6 +171,10 @@ Public Class Form1
             rules_game(2)
         End If
 
+        If lancha_imagen.Bounds.IntersectsWith(Barcobtn.Bounds) Then
+            rules_game(5)
+        End If
+
 
         For Each sobr In lista_surv
             If lancha_imagen.Bounds.IntersectsWith(sobr.imagen_sobrev.Bounds) Then
@@ -188,8 +193,14 @@ Public Class Form1
     End Function
 
     Function crearSobrevivientes()
+        Dim rnd As New Random()
         For Each sobreviviente In v_surv
+
             sobreviviente = New Survivor(Me.Width, Me.Height)
+            sobreviviente.imagen_sobrev.Location = New Point(Rnd.Next(Me.Width), Rnd.Next(Me.Height))
+
+
+
             lista_surv.Add(sobreviviente)
         Next
 
@@ -211,22 +222,36 @@ Public Class Form1
             Case 1  'Incrementa la vida de los salvavidas' 
                 number_survivor_saved.Text = Val(number_survivor_saved.Text) + 1
 
-                If number_survivor_saved.Text = "9" Then
-                    rules_game(3)
-                End If
 
             Case 2  'Pierda Vidas el bote'. 
                 life_boat_txt.Text = Val(life_boat_txt.Text) - 1
 
+                If Val(life_boat_txt.Text) <= 0 Then
+
+                    rules_game(4)
+                End If
+
             Case 3 'Llego a todas las vidas'
 
-                MessageBox.Show("Ganaste" & vbNewLine &
+                If number_puntos.Text = 3 Then
+                    MessageBox.Show("Ganaste" & vbNewLine &
                        "Universidad Tecnológica de Panamá" & vbNewLine &
                        "Facultad de Ingeniería en Sistemas Computacionales" & vbNewLine &
                        "Licenciatura en Desarrollo de Software" & vbNewLine &
                        "Profesor: Ricardo Chan" & vbNewLine &
                        "Autor: Diego Sastoque" & vbNewLine &
                        "Cédula: 20-14-3061")
+                End If
+
+                generalTime.Stop()
+                TimerBarcoCombustible.Stop()
+                timer_movLancha.Stop()
+
+                mov_survivor.Stop()
+                mov_Tiburon.Stop()
+
+                Me.Close()
+
             Case 4 'Perdio a todas las vidas'
 
                 MessageBox.Show("Perdiste" & vbNewLine &
@@ -236,6 +261,28 @@ Public Class Form1
                        "Profesor: Ricardo Chan" & vbNewLine &
                        "Autor: Diego Sastoque" & vbNewLine &
                        "Cédula: 20-14-3061")
+
+
+                generalTime.Stop()
+                TimerBarcoCombustible.Stop()
+                timer_movLancha.Stop()
+
+                mov_survivor.Stop()
+                mov_Tiburon.Stop()
+
+                Me.Close()
+            Case 5  'Entrega los salva vidas al barco' 
+
+                If Val(number_survivor_saved.Text) > 3 Then
+                    number_puntos.Text = Val(number_puntos.Text) + 1
+                    number_survivor_saved.Text = 0
+                End If
+
+                If Val(number_puntos.Text) = 3 Then
+
+                    rules_game(3)
+                End If
+
 
 
         End Select
@@ -255,7 +302,24 @@ Public Class Form1
         tib.tiburon_mov(Me.Width, Me.Height, lancha_imagen)
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Bmenu.Click
+        MessageBox.Show(
+                      "Universidad Tecnológica de Panamá" & vbNewLine &
+                      "Facultad de Ingeniería en Sistemas Computacionales" & vbNewLine &
+                      "Licenciatura en Desarrollo de Software" & vbNewLine &
+                      "Proyecto de Recuperación" & vbNewLine &
+                      "Profesor: Ricardo Chan" & vbNewLine &
+                      "Autor: Diego Sastoque" & vbNewLine &
+                      "Cédula: 20-14-3061")
+
+
+
+
+    End Sub
+
+    Private Sub Lancha_imagen_Click(sender As Object, e As EventArgs) Handles lancha_imagen.Click
 
     End Sub
 End Class

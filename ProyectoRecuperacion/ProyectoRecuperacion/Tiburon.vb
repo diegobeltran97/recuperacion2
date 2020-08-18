@@ -58,7 +58,7 @@
         alto = he
 
 
-        Debug.WriteLine(lancha.Bounds)
+
 
 
         If y <= headerHeight Then

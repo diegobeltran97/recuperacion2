@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,16 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.number_puntos = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Bmenu = New System.Windows.Forms.Button()
         Me.number_survivor_saved = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -50,6 +55,11 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.number_puntos)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Bmenu)
         Me.Panel1.Controls.Add(Me.number_survivor_saved)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -66,6 +76,56 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(810, 82)
         Me.Panel1.TabIndex = 0
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(603, 38)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(13, 13)
+        Me.Label10.TabIndex = 15
+        Me.Label10.Text = "3"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(585, 38)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(12, 13)
+        Me.Label9.TabIndex = 14
+        Me.Label9.Text = "/"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'number_puntos
+        '
+        Me.number_puntos.AutoSize = True
+        Me.number_puntos.Location = New System.Drawing.Point(566, 38)
+        Me.number_puntos.Name = "number_puntos"
+        Me.number_puntos.Size = New System.Drawing.Size(13, 13)
+        Me.number_puntos.TabIndex = 13
+        Me.number_puntos.Text = "0"
+        Me.number_puntos.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(520, 37)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(40, 13)
+        Me.Label7.TabIndex = 12
+        Me.Label7.Text = "Puntos"
+        '
+        'Bmenu
+        '
+        Me.Bmenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bmenu.Location = New System.Drawing.Point(626, 28)
+        Me.Bmenu.Name = "Bmenu"
+        Me.Bmenu.Size = New System.Drawing.Size(135, 31)
+        Me.Bmenu.TabIndex = 11
+        Me.Bmenu.Text = "Menu"
+        Me.Bmenu.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Bmenu.UseVisualStyleBackColor = True
         '
         'number_survivor_saved
         '
@@ -94,7 +154,7 @@ Partial Class Form1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(13, 13)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "9"
+        Me.Label5.Text = "3"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'Label4
@@ -177,12 +237,14 @@ Partial Class Form1
         '
         'Barcobtn
         '
-        Me.Barcobtn.Location = New System.Drawing.Point(12, 415)
+        Me.Barcobtn.BackColor = System.Drawing.Color.Transparent
+        Me.Barcobtn.BackgroundImage = CType(resources.GetObject("Barcobtn.BackgroundImage"), System.Drawing.Image)
+        Me.Barcobtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Barcobtn.Location = New System.Drawing.Point(12, 384)
         Me.Barcobtn.Name = "Barcobtn"
-        Me.Barcobtn.Size = New System.Drawing.Size(75, 23)
+        Me.Barcobtn.Size = New System.Drawing.Size(99, 54)
         Me.Barcobtn.TabIndex = 1
-        Me.Barcobtn.Text = "Barco"
-        Me.Barcobtn.UseVisualStyleBackColor = True
+        Me.Barcobtn.UseVisualStyleBackColor = False
         '
         'TimerBarcoCombustible
         '
@@ -215,8 +277,8 @@ Partial Class Form1
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lancha_imagen)
-        Me.Controls.Add(Me.Barcobtn)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Barcobtn)
         Me.Name = "Form1"
         Me.Text = "ProyectRecuperacion"
         Me.Panel1.ResumeLayout(False)
@@ -245,4 +307,9 @@ Partial Class Form1
     Friend WithEvents number_survivor_saved As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Bmenu As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents number_puntos As Label
 End Class

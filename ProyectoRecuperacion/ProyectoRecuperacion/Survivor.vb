@@ -16,6 +16,8 @@
         imagen_sobrev.Size = New Size(50, 50)
         rnd = New Random()
         imagen_sobrev.Location = New Point(rnd.Next(widthForm - imagen_sobrev.Width), rnd.Next(heightForm - headerHeight - imagen_sobrev.Height))
+
+        Debug.WriteLine(imagen_sobrev.Location)
         imagen_sobrev.Image = Image.FromFile("Resources\sobreviente.png")
         imagen_sobrev.SizeMode = PictureBoxSizeMode.StretchImage
         dirx = 4
